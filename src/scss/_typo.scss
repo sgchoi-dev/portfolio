@@ -1,0 +1,168 @@
+.f-dp1 {
+  font-family: "Inter", sans-serif !important;
+  font-size: clamp(92rem, 140rem, 140rem);
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+@include tablet() {
+  .f-dp1 {
+    font-size: clamp(26rem, 64rem, 64rem);
+  }
+}
+
+.f-dp2 {
+  font-family: "Inter", sans-serif !important;
+  font-size: clamp(72rem, 110rem, 110rem);
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+@include tablet() {
+  .f-dp2 {
+    font-size: clamp(40rem, 44rem, 44rem);
+  }
+}
+
+.f-dp3 {
+  font-family: "Inter", sans-serif !important;
+  font-size: clamp(60rem, 86rem, 86rem);
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+@include tablet() {
+  .f-dp3 {
+    font-size: clamp(36rem, 40rem, 40rem);
+  }
+}
+
+.f-hd {
+  font-family: "Inter", "Pretendard", sans-serif !important;
+  font-size: clamp(60rem, 72rem, 72rem);
+  font-weight: 700;
+  line-height: 110%;
+  letter-spacing: -0.1rem;
+}
+@include tablet() {
+  .f-hd {
+    font-size: clamp(32rem, 36rem, 36rem);
+  }
+}
+
+.f-tit1 {
+  font-size: clamp(40rem, 60rem, 60rem);
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -0.2rem;
+}
+@include tablet() {
+  .f-tit1 {
+    font-size: clamp(24rem, 32rem, 32rem);
+  }
+}
+
+.f-tit2 {
+  font-size: clamp(30rem, 40rem, 40rem);
+  font-weight: 700;
+  line-height: 130%;
+  letter-spacing: -0.5rem;
+}
+@include tablet() {
+  .f-tit2 {
+    font-size: clamp(20rem, 24rem, 24rem);
+  }
+}
+
+.f-tit3 {
+  font-size: clamp(24rem, 30rem, 30rem);
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -0.2rem;
+}
+@include tablet() {
+  .f-tit3 {
+    font-size: clamp(18rem, 20rem, 20rem);
+  }
+}
+
+.f-tit4 {
+  font-size: clamp(20rem, 24rem, 24rem);
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: -0.1rem;
+}
+@include tablet() {
+  .f-tit4 {
+    font-size: clamp(16rem, 18rem, 18rem);
+  }
+}
+
+.f-bd1 {
+  font-size: clamp(18rem, 20rem, 20rem);
+  font-weight: 700;
+  line-height: 140%;
+  letter-spacing: -0.2rem;
+}
+@include tablet() {
+  .f-bd1 {
+    font-size: clamp(15rem, 16rem, 16rem);
+  }
+}
+
+.f-bd2 {
+  font-size: clamp(16rem, 18rem, 18rem);
+  font-weight: 700;
+  line-height: 160%;
+  letter-spacing: -0.2rem;
+}
+@include tablet() {
+  .f-bd2 {
+    font-size: clamp(14rem, 15rem, 15rem);
+  }
+}
+
+.f-bd3 {
+  font-size: clamp(14rem, 16rem, 16rem);
+  font-weight: 700;
+  line-height: 160%;
+  letter-spacing: -0.4rem;
+}
+@include tablet() {
+  .f-bd3 {
+    font-size: clamp(13rem, 14rem, 14rem);
+  }
+}
+
+.f-ct {
+  font-size: clamp(13rem, 14rem, 14rem);
+  font-weight: 700;
+  line-height: 140%;
+  letter-spacing: -0.2rem;
+}
+@include tablet() {
+  .f-ct {
+    font-size: clamp(12rem, 13rem, 13rem);
+  }
+}
+
+.f {
+  &-inter {
+    font-family: "Inter", sans-serif !important;
+  }
+  &-pretendard {
+    font-family: "Pretendard", sans-serif !important;
+  }
+  &-bold {
+    font-weight: 700 !important;
+  }
+  &-medium {
+    font-weight: 500 !important;
+  }
+  &-regular {
+    font-weight: 400 !important;
+  }
+  &-light {
+    font-weight: 300 !important;
+  }
+}

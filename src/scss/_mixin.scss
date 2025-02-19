@@ -1,0 +1,98 @@
+//style
+@mixin abbr($w: 100%) {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: $w;
+}
+
+@mixin multiAbbr($line: 2, $w: 100%, $h: 100%) {
+  /* multiAbbr는 IE에서 사용금지 */
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: $w;
+  // height: $h;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
+}
+
+@mixin borderRadius($a: 50%, $b: 50%, $c: 50%, $d: 50%) {
+  -webkit-border-radius: $a $b $c $d;
+  -ms-border-radius: $a $b $c $d;
+  -o-border-radius: $a $b $c $d;
+  border-radius: $a $b $c $d;
+}
+
+@mixin clear {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+@mixin bg($url) {
+  background: url($url) no-repeat center center / cover;
+}
+
+@mixin grid($col: 3, $colgap: 20rem, $rowgap: 20rem) {
+  display: grid;
+  grid-template-columns: repeat($col, minmax(auto, 1fr));
+  column-gap: $colgap;
+  row-gap: $rowgap;
+}
+
+@mixin maxGrid($col: 3, $colgap: 20rem, $rowgap: 20rem, $maxW) {
+  display: grid;
+  grid-template-columns: repeat($col, minmax(auto, $maxW));
+  column-gap: $colgap;
+  row-gap: $rowgap;
+}
+
+@mixin flexCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin posCenter() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin posX() {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+@mixin posY() {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+}
+
+//mediaquery
+@mixin mobile() {
+  @media all and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media all and (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin pc() {
+  @media all and (min-width: 1024px) {
+    @content;
+  }
+}
