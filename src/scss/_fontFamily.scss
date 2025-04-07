@@ -1,5 +1,19 @@
 @font-face {
   font-family: "Pretendard";
+  src: url(/fonts/Pretendard/Pretendard-Black.subset.woff2) format("woff2"),
+    url(/fonts/Pretendard/Pretendard-Black.subset.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url(/fonts/Pretendard/Pretendard-ExtraBold.subset.woff2) format("woff2"),
+    url(/fonts/Pretendard/Pretendard-ExtraBold.subset.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard";
   src: url(/fonts/Pretendard/Pretendard-Bold.subset.woff2) format("woff2"),
     url(/fonts/Pretendard/Pretendard-Bold.subset.woff) format("woff");
   font-weight: 700;
@@ -24,17 +38,5 @@
   src: url(/fonts/Pretendard/Pretendard-Light.subset.woff2) format("woff2"),
     url(/fonts/Pretendard/Pretendard-Light.subset.woff) format("woff");
   font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Inter";
-  src: url(/fonts/Inter/Inter-Bold.woff) format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Inter";
-  src: url(/fonts/Inter/Inter-Medium.woff) format("woff");
-  font-weight: 500;
   font-style: normal;
 }
