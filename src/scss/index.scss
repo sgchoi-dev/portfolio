@@ -1,6 +1,7 @@
-@import "./mixin";
-@import "./variable";
-@import "./reset";
-@import "./fontFamily";
-@import "./typo";
-@import "./common";
+@forward "./mixin";
+@forward "./variable";
+@forward "./reset";
+@forward "./fontFamily";
+@forward "./typo";
+@forward "./common";
+@forward "./main";
