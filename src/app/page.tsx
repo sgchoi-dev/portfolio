@@ -6,9 +6,9 @@ export default function Home() {
       <div className="main-my-info">
         <div className="name-area">
           <p className="name">
-            <span className="row">TEST</span>
-            <span className="row">TEST</span>
-            <span className="row">TEST</span>
+            <span className="row">TEST1</span>
+            <span className="row">TEST2</span>
+            <span className="row">TEST3</span>
           </p>
         </div>
 
