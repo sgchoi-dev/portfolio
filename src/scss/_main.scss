@@ -1,19 +1,30 @@
 main {
+  display: flex;
+
   position: relative;
+
   width: 100%;
   min-height: 100vh;
-  background-color: #4801ff;
+  // background-color: #4801ff;
+  //background-color: #550080;
+  // background-color: #800080;
+  background-color: #ffde21;
 
   .main-my-info {
     display: flex;
     flex-direction: column;
     gap: 20rem;
     position: absolute;
-    left: 50rem;
+    left: 5vw;
     bottom: 50rem;
-    color: #fff;
+    color: #ffde21;
+    z-index: 1;
+    opacity: 0.4;
     .name-area {
       .name {
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
         font-weight: 900;
         font-size: 100rem;
         line-height: 80%;
@@ -25,6 +36,7 @@ main {
       flex-direction: column;
       gap: 6rem;
       font-size: 14rem;
+      color: #fff;
 
       .my-detail-info {
         display: flex;
@@ -40,7 +52,7 @@ main {
               margin: 0 10rem;
               width: 1px;
               height: 13rem;
-              background-color: #fff;
+              background-color: gold;
             }
           }
         }
@@ -50,6 +62,342 @@ main {
       .copyright {
         font-weight: 400;
         background-color: gold;
+      }
+    }
+  }
+}
+
+.main-menu-area {
+  // Stage
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+
+  .menu-perspective {
+    position: relative;
+    width: 100%;
+    perspective: 100vw;
+  }
+
+  &:not(.isMobile) {
+    .menu-perspective {
+      height: 100vh;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+  }
+
+  .container {
+    position: relative;
+    width: 100%;
+    transform: translateZ(0);
+    transform-style: preserve-3d;
+  }
+
+  .menus {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100vh;
+    padding: 50rem 5vw;
+    transform-style: preserve-3d;
+    opacity: 1;
+    transition: opacity 1s;
+  }
+
+  &.safari .menus {
+    position: absolute;
+    padding-bottom: 0;
+  }
+
+  &.isMobile {
+    .menus {
+      position: static;
+    }
+  }
+
+  // Projects
+
+  .menus-wrap {
+    position: relative;
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    text-align: right;
+    width: 95%;
+    transform-style: preserve-3d;
+  }
+
+  .menusLi {
+    cursor: pointer;
+    transform-style: preserve-3d;
+  }
+
+  .menu-container {
+    transform: rotate3d(0, 1, 0, -45deg) translateZ(0) scale(1);
+    transform-origin: right center;
+    transform-style: preserve-3d;
+    will-change: transform;
+
+    @media screen and (min-width: 768px) {
+      transition: transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+  }
+
+  &:not(.intro) .menusLi:hover .menu-container,
+  &:not(.intro) .menusLi.isHovered .menu-container {
+    transform: rotate3d(0, 1, 0, -35deg) translateZ(0) scale(1);
+    transition-duration: 1s;
+  }
+
+  .menusLi.isSelected .menu-container,
+  .menusLi.isSelected:hover .menu-container {
+    transform: rotate3d(0, 1, 0, 0deg) translateZ(0) scale(1);
+
+    @media screen and (max-width: 767px) {
+      transition: transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1), opacity 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    a {
+      @supports ((-webkit-text-stroke: 3px #151515) or (text-stroke: 3px #151515)) {
+        -webkit-text-stroke: 0px #151515;
+        text-stroke: 0px #151515;
+      }
+    }
+  }
+
+  &:not(.intro) .menus-wrap:hover .menusLi:hover a,
+  &:not(.intro) .menus-wrap:hover .menusLi.isHovered a {
+    transition-duration: 0.3s;
+
+    @supports ((-webkit-text-stroke: 3px #151515) or (text-stroke: 3px #151515)) {
+      color: #fff;
+      color: transparent;
+    }
+  }
+
+  .menus-wrap a {
+    position: relative;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 9.6vw;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 0.9em;
+
+    transition: color 0.5s, opacity 0.5s;
+
+    @supports ((-webkit-text-stroke: 2px #000) or (text-stroke: 2px #000)) {
+      -webkit-text-stroke: 2px #000;
+      text-stroke: 2px #000;
+    }
+  }
+
+  .menus-wrap a:before {
+    content: attr(data-info);
+    white-space: pre;
+    position: absolute;
+    top: 3.7em;
+    left: -250px;
+    width: 200px;
+    text-align: right;
+    font-size: 0.7vw;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 1em;
+    color: #000 !important;
+    pointer-events: none;
+    transition: none;
+    @supports ((-webkit-text-stroke: 2px #000) or (text-stroke: 2px #000)) {
+      -webkit-text-stroke: transparent;
+      text-stroke: transparent;
+    }
+  }
+
+  .menus-wrap a:after {
+    content: "";
+    position: absolute;
+    top: 0.23em;
+    left: -0.3em;
+    width: 2px;
+    height: 0.85em;
+    background-color: #000;
+    transform: rotateZ(25deg);
+    pointer-events: none;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1320px) {
+    .menus-wrap a {
+      font-size: 7.4vw;
+
+      @supports ((-webkit-text-stroke: 2px #000) or (text-stroke: 2px #000)) {
+        -webkit-text-stroke-width: 2px;
+        text-stroke-width: 2px;
+      }
+    }
+
+    .menus-wrap a:after {
+      width: 2px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    overflow-x: hidden;
+
+    .menus {
+      padding-top: 17vw;
+      padding-bottom: 17vw;
+    }
+
+    .menus-wrap a {
+      @supports ((-webkit-text-stroke: 1px #000) or (text-stroke: 1px #000)) {
+        -webkit-text-stroke-width: 1px;
+        text-stroke-width: 1px;
+      }
+    }
+
+    .menus-wrap a:after {
+      width: 1px;
+    }
+  }
+
+  @media screen and (max-width: 420px) {
+    .menus {
+      padding-top: 25vw;
+    }
+
+    .menus-wrap a:before {
+      top: 10px;
+      left: -220px;
+      font-size: 7px;
+    }
+
+    .menus-wrap a:after {
+      top: 10px;
+      left: -15px;
+    }
+
+    .menus-wrap {
+      width: 100%;
+    }
+
+    .menus-wrap a {
+      font-size: 13vw;
+      letter-spacing: normal;
+    }
+  }
+
+  // Intro
+
+  &:not(.isMobile).intro {
+    pointer-events: none;
+  }
+
+  &.intro .menus {
+    transform: translate3d(0, -110%, 0);
+    animation: introStage 2s forwards;
+  }
+
+  &:not(.isMobile).intro .menus {
+    position: absolute;
+  }
+
+  &.intro .menu-container {
+    visibility: hidden;
+    transition: none;
+    animation: introProjectContainer 2s forwards;
+  }
+
+  @for $i from 1 through 8 {
+    &.intro .menusLi:nth-child(#{$i}) .menu-container {
+      animation-delay: 1s - ($i / 10);
+    }
+  }
+
+  @keyframes introStage {
+    0% {
+      transform: translate3d(0, -110%, 0);
+    }
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  @keyframes introProjectContainer {
+    0% {
+      visibility: visible;
+      opacity: 0;
+      transform: rotate3d(0, 1, 0, -100deg) translateZ(0) scale(1);
+    }
+    100% {
+      visibility: visible;
+      opacity: 1;
+      transform: rotate3d(0, 1, 0, -45deg) translateZ(0) scale(1);
+    }
+  }
+
+  // Outro
+
+  &.outro {
+    &:not(.isMobile) {
+      pointer-events: none;
+    }
+
+    .container {
+      transform: translate3d(0, 0, 0);
+      animation: outro 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) 1.15s forwards;
+    }
+
+    .menu-container {
+      transition: transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1), opacity 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    .menusLi:not(.isSelected) .menu-container {
+      transform: rotate3d(0, 1, 0, -114deg) translateZ(0) scale(1);
+      opacity: 0;
+      transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      transition-duration: 0.25s;
+    }
+
+    @for $i from 1 through 9 {
+      .menusLi:not(.isSelected):nth-child(#{$i}) .menu-container {
+        transition-delay: 1s - ($i / 10);
+      }
+    }
+
+    .menusLi.isSelected .menu-container,
+    .menusLi.isSelected:hover .menu-container {
+      transform: rotate3d(0, 1, 0, 0deg) translateZ(0) scale(0.7);
+      opacity: 0;
+      transition-duration: 0.5s;
+      transition-delay: 1s;
+    }
+
+    .menusLi.isSelected .menu-container a {
+      transition-delay: 1.15s;
+    }
+
+    .menusLi.isSelected .menu-container a {
+      &:before,
+      &:after {
+        opacity: 0;
+        transition: opacity 0.2s ease-out 0.15s;
+      }
+    }
+
+    @keyframes outro {
+      0% {
+        transform: translate3d(0, 0, 0);
+      }
+      100% {
+        transform: translate3d(0, -25vh, 0);
       }
     }
   }
