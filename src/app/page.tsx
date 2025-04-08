@@ -1,7 +1,4 @@
-import Image from "next/image";
-import styles from "./page.module.css";
 import Link from "next/link";
-// import "../css/index.css";
 
 export default function Home() {
   return (
@@ -28,14 +25,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* <div className="menu-wrap">
-        <div className="mnue-list">
-          <Link className="menu" href={"/project"}>
-            <span className="txt">PROJECT</span>
-          </Link>
-        </div>
-      </div> */}
-
       <div className="main-menu-area">
         <div className="menu-perspective">
           <div className="container">
@@ -43,41 +32,27 @@ export default function Home() {
               <ul className="menus-wrap">
                 <li className="menusLi">
                   <div className="menu-container">
-                    <a href="/work/studiomega/" className="">
+                    <Link href="/aboutme" className="">
                       ABOUT
                       <br />
                       ME
-                    </a>
+                    </Link>
                   </div>
                 </li>
                 <li className="menusLi">
                   <div className="menu-container">
-                    <a href="/work/thebrigade/" className="">
+                    <Link href="/work/thebrigade/" className="">
                       PROJECT
-                    </a>
+                    </Link>
                   </div>
                 </li>
                 <li className="menusLi">
                   <div className="menu-container">
-                    <a href="/work/thebrigade/" className="">
+                    <Link href="/work/thebrigade/" className="">
                       CONTACT
-                    </a>
+                    </Link>
                   </div>
                 </li>
-                {/* <li className="menusLi">
-                  <div className="menu-container">
-                    <a href="/work/push/" className="">
-                      Push
-                    </a>
-                  </div>
-                </li>
-                <li className="menusLi">
-                  <div className="menu-container">
-                    <a href="/work/onxmaps/" data-info="2017">
-                      onX Maps
-                    </a>
-                  </div>
-                </li> */}
               </ul>
             </div>
           </div>
