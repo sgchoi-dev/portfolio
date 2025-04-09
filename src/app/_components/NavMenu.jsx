@@ -6,8 +6,6 @@ import Link from "next/link";
 
 export default function NavMenu() {
   const pathname = usePathname();
-  console.log("pathname", pathname);
-  console.log(pathname === "/aboutme");
 
   return (
     <div className="nav-menu-area">
