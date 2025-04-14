@@ -3,6 +3,13 @@ body {
   transition: background-color 0.7s ease-in-out;
 }
 
+.inner {
+  position: relative;
+  margin: 0 auto;
+  width: 60%;
+  background-color: green;
+}
+
 .page-top-fix-area {
   position: fixed;
   left: 5vw;
@@ -113,7 +120,7 @@ body {
     justify-content: flex-end;
     width: 100%;
     height: 100vh;
-    padding: 50rem 5vw;
+    padding: 50rem 3vw;
     padding-left: 40vw;
     transform-style: preserve-3d;
     opacity: 1;
@@ -189,7 +196,7 @@ body {
     letter-spacing: 0.02em;
     line-height: 0.9em;
 
-    transition: color 0.5s, opacity 0.5s;
+    transition: color 0.8s, opacity 0.8s, font-size 0.8s;
 
     @supports ((-webkit-text-stroke: 2px #000) or (text-stroke: 2px #000)) {
       -webkit-text-stroke: 2px #000;
@@ -409,12 +416,12 @@ body:not(:has(main)) {
 
   .page-top-fix-area {
     top: 50rem;
-    left: 5vw;
+    left: 3vw;
     width: 100%;
 
     header {
       .name {
-        font-size: 50rem;
+        font-size: 36rem;
       }
     }
     footer {
@@ -424,8 +431,17 @@ body:not(:has(main)) {
 
   .nav-menu-area {
     .menus-wrap {
-      transform: scale(0.35);
+      //transform: scale(0.28);
+
       transform-origin: right center;
+
+      a {
+        font-size: 40rem;
+      }
+
+      .menu-container {
+        transform: rotate3d(0, 0, 0, 0) translateZ(0) scale(1);
+      }
     }
   }
 }

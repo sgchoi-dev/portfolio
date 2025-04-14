@@ -18,7 +18,7 @@ export default function NavMenu() {
                   <Link
                     href="/aboutme"
                     className={classNames("click-area", {
-                      on: pathname === "/aboutme",
+                      on: pathname.includes("aboutme"),
                     })}
                   >
                     ABOUT
@@ -32,7 +32,7 @@ export default function NavMenu() {
                   <Link
                     href="/project/"
                     className={classNames("click-area", {
-                      on: pathname === "/project",
+                      on: pathname.includes("project"),
                     })}
                   >
                     PROJECT
@@ -44,7 +44,7 @@ export default function NavMenu() {
                   <Link
                     href="/contact/"
                     className={classNames("click-area", {
-                      on: pathname === "/contact",
+                      on: pathname.includes("contact"),
                     })}
                   >
                     CONTACT
