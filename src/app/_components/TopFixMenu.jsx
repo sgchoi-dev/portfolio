@@ -5,9 +5,9 @@ export default function TopFixMenu() {
     <div className="page-top-fix-area">
       <header>
         <Link className="name" href="/">
-          <span className="row">TEST1</span>
-          <span className="row">TEST2</span>
-          <span className="row">TEST3</span>
+          <span className="row">CHOI</span>
+          <span className="row">SEUL</span>
+          <span className="row">GI</span>
         </Link>
         <div></div>
       </header>

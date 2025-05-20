@@ -1,0 +1,29 @@
+.con-list-w {
+  display: flex;
+  flex-direction: column;
+  gap: 150rem;
+
+  .con-list {
+    .cont-tit {
+      margin-bottom: 24rem;
+      .tit {
+        font-weight: 700;
+        font-size: 45rem;
+      }
+    }
+  }
+}
+
+.skill-icon-list-w {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+
+  .skill-icon-list {
+    width: 100rem;
+    height: 100rem;
+
+    svg {
+      width: 100%;
+    }
+  }
+}

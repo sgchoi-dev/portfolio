@@ -7,7 +7,6 @@ body {
   position: relative;
   margin: 0 auto;
   width: 60%;
-  background-color: green;
 }
 
 .page-top-fix-area {
@@ -165,11 +164,14 @@ body {
     transform: rotate3d(0, 1, 0, 0deg) translateZ(0) scale(1);
 
     @media screen and (max-width: 767px) {
-      transition: transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1), opacity 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+      transition: transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1),
+        opacity 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     }
 
     a {
-      @supports ((-webkit-text-stroke: 3px #151515) or (text-stroke: 3px #151515)) {
+      @supports (
+        (-webkit-text-stroke: 3px #151515) or (text-stroke: 3px #151515)
+      ) {
         -webkit-text-stroke: 0px #151515;
         text-stroke: 0px #151515;
       }
@@ -180,7 +182,9 @@ body {
   &:not(.intro) .menus-wrap:hover .menusLi.isHovered a {
     transition-duration: 0.3s;
 
-    @supports ((-webkit-text-stroke: 3px #151515) or (text-stroke: 3px #151515)) {
+    @supports (
+      (-webkit-text-stroke: 3px #151515) or (text-stroke: 3px #151515)
+    ) {
       color: #fff;
       color: transparent;
     }
@@ -364,7 +368,8 @@ body {
     }
 
     .menu-container {
-      transition: transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1), opacity 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+      transition: transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1),
+        opacity 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     }
 
     .menusLi:not(.isSelected) .menu-container {
@@ -417,7 +422,7 @@ body:not(:has(main)) {
   .page-top-fix-area {
     top: 50rem;
     left: 3vw;
-    width: 100%;
+    // width: 100%;
 
     header {
       .name {
