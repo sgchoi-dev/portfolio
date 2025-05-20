@@ -1,6 +1,4 @@
-import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCode } from "@fortawesome/free-solid-svg-icons";
 import { faHtml5, faCss3, faReact } from "@fortawesome/free-brands-svg-icons";
 
 export default function Aboutme() {
